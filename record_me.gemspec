@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = RecordMe::VERSION
   spec.authors       = ["Marco Gallardo"]
   spec.email         = ["marco.gallardo@tangosource.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Record sounds}
+  spec.summary       = %q{Record sounds}
   spec.homepage      = ""
   spec.license       = "MIT"
 
