@@ -1,5 +1,11 @@
-require "record_me/version"
+require "record_me/version.rb"
+require "record_me/rec.rb"
+require "record_me/helpers.rb"
 
-module RecordMe
-  # Your code goes here...
+ActiveSupport.on_load(:action_controller) do
+  include RecordMe::Rec
+end
+
+ActiveSupport.on_load(:action_view) do
+  include RecordMe::Helpers
 end
