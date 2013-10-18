@@ -1,14 +1,11 @@
 module RecordMe
   module Helpers
-
-    def record_me_location
-      content_tag :div, id: 'recorder_location' do
-      end
-    end
     
     def record_script(options = {})
       javascript_tag do
-        ("var recorderLocation = $('#recorder_location')[0];\n\
+        ("\n\
+          $('body').prepend('<div id=record_me_location></div>');\n\
+          var recorderLocation = $('#record_me_location')[0];\n\
           var recorderStart = $('.record_me_play')[0];\n\
           var recorderStop = $('.record_me_stop')[0];\n\
           var recorderReproduce = $('.record_me_reproduce')[0];\n\
