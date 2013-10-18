@@ -16,14 +16,16 @@ module RecordMe
       end
     end
     
-    def record_script(audio_path = '', time_lapse = 30)
+    def record_script(options = {})
       javascript_tag do
         ("var recorderLocation = $('#recorder_location')[0];\n\
           var recorderStart = $('#recorder_start')[0];\n\
           var recorderStop = $('#recorder_stop')[0];\n\
           $.jRecorder(\n\
           {\n\
-            host:\"#{audio_path}?filename=audio.wav\",\n\
+            rec_top: \"#{options[:rec_top] || '40%'}\",\n\
+            rec_left: \"#{options[:rec_left] || '40%'}\",\n\
+            host:\"#{options[:receive_audio_path] || ''}?filename=audio.wav\",\n\
             callback_started_recording: function(){callback_started(); },\n\
             callback_stopped_recording: function(){callback_stopped(); },\n\
             callback_activityLevel: function(level){callback_activityLevel(level); },\n\
@@ -33,7 +35,7 @@ module RecordMe
           }, $(recorderLocation));\n\
 
           $(recorderStart).click(function(){\n
-            $.jRecorder.record(#{time_lapse});\n
+            $.jRecorder.record(#{options[:time_lapse] || 30});\n
           });\n
 
           $(recorderStop).click(function(){\n
