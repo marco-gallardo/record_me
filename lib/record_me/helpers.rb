@@ -16,11 +16,17 @@ module RecordMe
       end
     end
     
+    def record_me_reproduce(klass)
+      content_tag :div, id: 'recorder_reproduce', class: klass do
+      end
+    end
+    
     def record_script(options = {})
       javascript_tag do
         ("var recorderLocation = $('#recorder_location')[0];\n\
           var recorderStart = $('#recorder_start')[0];\n\
           var recorderStop = $('#recorder_stop')[0];\n\
+          var recorderReproduce = $('#recorder_reproduce')[0];\n\
           $.jRecorder(\n\
           {\n\
             rec_top: \"#{options[:rec_top] || '40%'}\",\n\
@@ -39,6 +45,11 @@ module RecordMe
           });\n
 
           $(recorderStop).click(function(){\n
+            $.jRecorder.stop();\n
+          });\n
+
+          $(recorderReproduce).click(function(){\n
+            //jRecorder doesn't have an option to reproduce the clip, by stopping it we can accomplish that
             $.jRecorder.stop();\n
           });\n
         ").html_safe
