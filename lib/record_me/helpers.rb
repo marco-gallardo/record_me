@@ -2,7 +2,8 @@ module RecordMe
   module Helpers
 
     def record_tag
-      content_tag(:div, class: 'location_recorder')
+      content_tag :div, class: 'location_recorder' do
+      end
     end
     
     def record_script(audio_path = '')
