@@ -6,27 +6,12 @@ module RecordMe
       end
     end
     
-    def record_me_start(klass)
-      content_tag :div, id: 'recorder_start', class: klass do
-      end
-    end
-    
-    def record_me_stop(klass)
-      content_tag :div, id: 'recorder_stop', class: klass do
-      end
-    end
-    
-    def record_me_reproduce(klass)
-      content_tag :div, id: 'recorder_reproduce', class: klass do
-      end
-    end
-    
     def record_script(options = {})
       javascript_tag do
         ("var recorderLocation = $('#recorder_location')[0];\n\
-          var recorderStart = $('#recorder_start')[0];\n\
-          var recorderStop = $('#recorder_stop')[0];\n\
-          var recorderReproduce = $('#recorder_reproduce')[0];\n\
+          var recorderStart = $('.record_me_play')[0];\n\
+          var recorderStop = $('.record_me_stop')[0];\n\
+          var recorderReproduce = $('.record_me_reproduce')[0];\n\
           $.jRecorder(\n\
           {\n\
             rec_top: \"#{options[:rec_top] || '40%'}\",\n\
