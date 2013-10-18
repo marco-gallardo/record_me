@@ -16,7 +16,7 @@ module RecordMe
             callback_activityLevel: function(level){callback_activityLevel(level); },\n\
             callback_activityTime: function(time){callback_activityTime(time);},\n\
             callback_finished_sending: function(time){ callback_finished_sending() },\n\
-            swf_path : \"<%= asset_path('jRecorder.swf') %>\",\n\
+            swf_path : \"/assets/jRecorder.swf\",\n\
           }, $(locationRecorder));\n\
         ").html_safe
       end
