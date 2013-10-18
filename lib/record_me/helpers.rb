@@ -40,18 +40,18 @@ module RecordMe
             swf_path : \"/assets/jRecorder.swf\",\n\
           }, $(recorderLocation));\n\
 
-          $(recorderStart).click(function(){\n
-            $.jRecorder.record(#{options[:time_lapse] || 30});\n
-          });\n
+          $(recorderStart).click(function(){\n\
+            $.jRecorder.record(#{options[:time_lapse] || 30});\n\
+          });\n\
 
-          $(recorderStop).click(function(){\n
-            $.jRecorder.stop();\n
-          });\n
+          $(recorderStop).click(function(){\n\
+            $.jRecorder.stop();\n\
+          });\n\
 
-          $(recorderReproduce).click(function(){\n
-            //jRecorder doesn't have an option to reproduce the clip, by stopping it we can accomplish that
-            $.jRecorder.stop();\n
-          });\n
+          $(recorderReproduce).click(function(){\n\
+            //jRecorder doesn't have an option to reproduce the clip, by stopping it we can accomplish that\n\
+            $.jRecorder.stop();\n\
+          });\n\
         ").html_safe
       end
     end
