@@ -34,6 +34,20 @@ module RecordMe
             //jRecorder doesn't have an option to reproduce the clip, by stopping it we can accomplish that\n\
             $.jRecorder.stop();\n\
           });\n\
+
+          function callback_activityTime(time)\n\
+          {\n\
+            var time = parseInt(time);\n\
+            var minutes = Math.floor(time/60);\n\
+            var seconds = time % 60;\n\
+            timer(time, minutes, seconds);\n\
+          };\n\
+
+          function timer(time, minutes, seconds){\n\
+            seconds = ((time % 60) < 10) ? ('0' + seconds.toString()) : seconds.toString();\n\
+            $('.record_me_timer').html(minutes.toString() + ':' + seconds.toString());\n\
+          };\n\
+
         ").html_safe
       end
     end
