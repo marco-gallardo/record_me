@@ -8,6 +8,7 @@ module RecordMe
           var recorderLocation = $('#record_me_location')[0];\n\
           var recorderStart = $('.record_me_play')[0];\n\
           var recorderStop = $('.record_me_stop')[0];\n\
+          var recorderSendData = $('.record_me_save')[0];\n\
           var recorderReproduce = $('.record_me_reproduce')[0];\n\
           $.jRecorder(\n\
           {\n\
@@ -35,9 +36,9 @@ module RecordMe
             $.jRecorder.stop();\n\
           });\n\
 
-          function callback_stopped(){
+          $(recorderSendData).click(function(){\n\
             $.jRecorder.sendData();
-          }
+          });\n\
 
           function callback_activityTime(time)\n\
           {\n\
