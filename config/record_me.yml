@@ -1,23 +1,24 @@
 # set custom configuration for record_me
-#  top  => sets absolute top position 
-#  left => sets absolute top position 
-#  time => sets the time to record expressed in seconds; max 3 minutes (180 sec.)
+# top  => sets absolute top position 
+# left => sets absolute top position 
+# time => sets the time to record expressed in seconds; max 3 minutes (180 sec.)
+# destination => the directory where records will be saved
 
 development:
-  top: '40%',
-  left: '40%',
+  top: 40%,
+  left: 40%,
   time: 30,
-  destination: 'public/records'
+  destination: public/records
 
 #staging:
-#  top: '40%',
-#  left: '40%',
+#  top: 40%,
+#  left: 40%,
 #  time: 30
-#  destination: 'public/records'
+#  destination: public/records
 
 #production:
-#  top: '40%',
-#  left: '40%',
+#  top: 40%,
+#  left: 40%,
 #  time: 30
-#  destination: 'public/records'
+#  destination: public/records
 
