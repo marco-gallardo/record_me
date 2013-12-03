@@ -1,7 +1,7 @@
 module RecordMe
   module Helpers
     
-    def record_script(options = {})
+    def record_me_js(options = {})
       javascript_tag do
         ("\n\
           $('body').prepend('<div id=record_me_location></div>');\n\
