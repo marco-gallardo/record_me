@@ -6,7 +6,7 @@ module RecordMe
         ("\n\
           $('body').prepend('<div id=record_me_location></div>');\n\
           var recorderLocation = $('#record_me_location')[0];\n\
-          var recorderStart = $('.record_me_play')[0];\n\
+          var recorderStart = $('.record_me_start')[0];\n\
           var recorderStop = $('.record_me_stop')[0];\n\
           var recorderSendData = $('.record_me_save')[0];\n\
           var recorderReproduce = $('.record_me_reproduce')[0];\n\
