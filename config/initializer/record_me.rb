@@ -8,6 +8,7 @@ module RecordMe
               "top" => '40%',
               "left" => '40%',
               "time" => 30,
+              "name" => 'record.wav',
               "destination" => 'public/records'
             }
 

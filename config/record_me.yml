@@ -5,20 +5,23 @@
 # destination => the directory where records will be saved
 
 development:
-  top: 40%,
-  left: 40%,
-  time: 30,
+  top: 40%
+  left: 40%
+  time: 30
+  name: record.wav
   destination: public/records
 
 #staging:
-#  top: 40%,
-#  left: 40%,
+#  top: 40%
+#  left: 40%
 #  time: 30
+#  name: record.wav
 #  destination: public/records
 
 #production:
-#  top: 40%,
-#  left: 40%,
+#  top: 40%
+#  left: 40%
 #  time: 30
+#  name: record.wav
 #  destination: public/records
 

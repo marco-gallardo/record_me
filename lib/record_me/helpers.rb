@@ -14,7 +14,7 @@ module RecordMe
           {\n\
             rec_top: \"#{options[:top] || '40%'}\",\n\
             rec_left: \"#{options[:left] || '40%'}\",\n\
-            host: \"#{options[:save_path] || ''}?filename=#{options[:name] || 'record.wav'}\",\n\
+            host: \"#{options[:save_path] || ''}?filename=#{options[:name] || RecordMe.configuration['name']}\",\n\
             callback_started_recording: function(){callback_started(); },\n\
             callback_stopped_recording: function(){callback_stopped(); },\n\
             callback_activityLevel: function(level){callback_activityLevel(level); },\n\
