@@ -1,7 +1,7 @@
 module RecordMe
 
   # the Authorization configuration file path
-  @file = Rails.root.join( 'config', 'record_me.yml' )
+  @file = Dir.pwd + '/config/record_me.yml' 
 
   # Configuration defaults
   @config = {
@@ -22,7 +22,7 @@ module RecordMe
     end 
 
     # creates directory where all records will be saved
-    directory = File.join(Rails.root, @config["destination"])
+    directory = Dir.pwd + "/#{@config['destination']}"
     Dir.mkdir(directory) unless File.directory?(directory)
   end
 
