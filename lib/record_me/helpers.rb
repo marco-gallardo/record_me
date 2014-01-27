@@ -1,6 +1,20 @@
 module RecordMe
   module Helpers
     
+    def flash_warning_message(html_element)
+      javascript_tag do
+       (" 
+          $(function() {\n\
+            var flash_supported = (typeof navigator.plugins != \"undefined\" && typeof navigator.plugins[\"Shockwave Flash\"] == \"object\");\n\
+            if(!flash_supported){\n\
+              var append_message = \".#{html_element || '.flash_warning_message'}\";\n\
+              $(append_message).append(\"Please install <a href='https://get.adobe.com/flashplayer/' target='_blank'>Adobe Flash Player</a> to use our recording tool.\");\n\
+            }\n\
+          })\n\
+        ").html_safe
+      end
+    end
+    
     def record_me_js(options = {})
       javascript_tag do
         ("\n\
