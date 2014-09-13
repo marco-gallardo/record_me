@@ -8,7 +8,7 @@ module RecordMe
             var flash_supported = (typeof navigator.plugins != \"undefined\" && typeof navigator.plugins[\"Shockwave Flash\"] == \"object\");\n\
             if(!flash_supported){\n\
               var append_message = \".#{html_element || '.flash_warning_message'}\";\n\
-              $(append_message).append(\"Please install <a href='https://get.adobe.com/flashplayer/' target='_blank'>Adobe Flash Player</a> to use our recording tool.\");\n\
+              $(append_message).append(\"Please install <a href='https://get.adobe.com/flashplayer/' target='_blank'>Adobe Flash Player</a> to use RecordMe.\");\n\
             }\n\
           })\n\
         ").html_safe
