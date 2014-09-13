@@ -27,8 +27,8 @@ module RecordMe
             var recorderReproduce = $('.record_me_reproduce')[0];\n\
             $.jRecorder(\n\
             {\n\
-              rec_top: \"#{options[:top] || '40%'}\",\n\
-              rec_left: \"#{options[:left] || '40%'}\",\n\
+              rec_top: \"#{options[:top] || RecordMe.configuration['top']}\",\n\
+              rec_left: \"#{options[:left] || RecordMe.configuration['left']}\",\n\
               host: \"#{options[:save_path] || ''}?filename=#{options[:name] || RecordMe.configuration['name']}\",\n\
               callback_started_recording: function(){callback_started(); },\n\
               callback_stopped_recording: function(){callback_stopped(); },\n\
