@@ -75,6 +75,11 @@ Additionally you can display a message asking to install Flash if it is not inst
 
 That's it! 
 
+## Wish list
+
+* Add tests
+* Ensure Rails 4.x compatibility
+
 ## Contributing
 
 1. Fork it
